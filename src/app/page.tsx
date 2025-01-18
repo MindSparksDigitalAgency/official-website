@@ -112,7 +112,7 @@ export default function Home() {
                 sizes="640px"
               />
               <Heading as="h2" align="center" variant="display-default-xs">
-                Welcome to Earth
+                Welcome to {person.firstName} {person.lastName}
               </Heading>
               <Text
                 align="center"
