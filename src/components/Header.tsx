@@ -87,7 +87,13 @@ export const Header = () => {
             <Flex hide="s">{`${person.firstName} ${person.lastName}`}</Flex>
           )}
         </Flex>
-        <Flex fillWidth horizontal="center">
+        <Flex
+          fillWidth
+          horizontal="center"
+          style={{
+            marginLeft: window.innerWidth < 768 ? "-3rem" : "",
+          }}
+        >
           <Flex
             background="surface"
             border="neutral-medium"

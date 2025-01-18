@@ -80,11 +80,12 @@ export const ToggleTheme: React.FC = () => {
         footer={""}
         style={{
           position: "absolute",
-          top: dialogPosition.top - 60,
-          left: dialogPosition.left - 400,
+          top: window.innerWidth < 768 ? "8vh" : dialogPosition.top + 10,
+          left: window.innerWidth < 768 ? "5%" : dialogPosition.left - 400,
           zIndex: 9999,
-          width: "25%",
+          width: window.innerWidth < 768 ? "90%" : "25%",
           maxWidth: "600px",
+          height: window.innerHeight < 768 ? "200px" : "100%",
         }}
       >
         <Flex paddingX="12" fillWidth>
