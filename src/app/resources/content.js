@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/MindSparksDigitalAgency",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://github.com/MindSparksDigitalAgency",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:mindsparks.agency@gmail.com",
   },
 ];
 
@@ -59,7 +59,7 @@ if (typeof window !== "undefined") {
 
 const home = {
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name} official`,
   description: `Portfolio website showcasing my work as a ${person.role} ${themeColor}`,
   headline: <>It's All About You </>,
   subline: (
@@ -97,7 +97,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Great ideas begin with a spark, and at Mindsparks, we make sure it burns bright.
+        Great ideas begin with a spark, and at {person.name}, we make sure it burns bright.
       </>
     ),
   },

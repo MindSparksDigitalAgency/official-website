@@ -184,7 +184,7 @@ export const Header = () => {
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex hide="s">
+            <Flex>
               <ToggleTheme />
             </Flex>
 
