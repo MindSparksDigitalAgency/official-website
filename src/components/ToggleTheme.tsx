@@ -12,7 +12,7 @@ import { style, updateTheme } from "@/app/resources/config";
 export const ToggleTheme: React.FC = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [theme, setTheme] = useState<string>(style.theme);
-  const iconButtonRef = useRef<HTMLButtonElement | null>(null); // Ref untuk IconButton
+  const iconButtonRef = useRef<HTMLButtonElement | null>(null);
   const [dialogPosition, setDialogPosition] = useState<{
     top: number;
     left: number;
@@ -29,15 +29,13 @@ export const ToggleTheme: React.FC = () => {
   };
 
   useEffect(() => {
-    // Set initial theme on page load
     document.body.setAttribute("data-theme", theme);
 
-    // Update dialog position when icon button is clicked
     if (iconButtonRef.current) {
       const { top, left, height } =
         iconButtonRef.current.getBoundingClientRect();
       setDialogPosition({
-        top: top + height + 10, // Menambahkan jarak dari bawah IconButton
+        top: top + height + 10,
         left: left,
       });
     }
@@ -63,7 +61,7 @@ export const ToggleTheme: React.FC = () => {
   return (
     <Flex>
       <IconButton
-        ref={iconButtonRef} // Menambahkan ref ke IconButton
+        ref={iconButtonRef}
         icon="HiOutlineSparkles"
         size="m"
         tooltip={
@@ -82,9 +80,11 @@ export const ToggleTheme: React.FC = () => {
         footer={""}
         style={{
           position: "absolute",
-          top: dialogPosition.top - 50,
-          left: dialogPosition.left - 630,
-          zIndex: 9999, // Menempatkan dialog di atas elemen lainnya
+          top: dialogPosition.top - 60,
+          left: dialogPosition.left - 400,
+          zIndex: 9999,
+          width: "25%",
+          maxWidth: "600px",
         }}
       >
         <Flex paddingX="12" fillWidth>
