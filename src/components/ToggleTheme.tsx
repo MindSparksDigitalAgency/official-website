@@ -17,6 +17,10 @@ export const ToggleTheme: React.FC = () => {
     top: number;
     left: number;
   }>({ top: 0, left: 30 });
+  const [dimensions, setDimensions] = useState<{
+    width: number;
+    height: number;
+  }>({ width: 0, height: 0 });
 
   const toggleDialog = () => {
     setIsDialogOpen(!isDialogOpen);
@@ -80,12 +84,12 @@ export const ToggleTheme: React.FC = () => {
         footer={""}
         style={{
           position: "absolute",
-          top: window.innerWidth < 768 ? "8vh" : dialogPosition.top + 10,
-          left: window.innerWidth < 768 ? "5%" : dialogPosition.left - 400,
+          top: dimensions.width < 768 ? "8vh" : dialogPosition.top + 10,
+          left: dimensions.width < 768 ? "5%" : dialogPosition.left - 400,
           zIndex: 9999,
-          width: window.innerWidth < 768 ? "90%" : "25%",
+          width: dimensions.width < 768 ? "90%" : "25%",
           maxWidth: "600px",
-          height: window.innerHeight < 768 ? "200px" : "100%",
+          height: dimensions.height < 768 ? "200px" : "100%",
         }}
       >
         <Flex paddingX="12" fillWidth>

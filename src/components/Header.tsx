@@ -55,6 +55,13 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const [marginLeft, setMarginLeft] = useState<string>("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setMarginLeft(window.innerWidth < 768 ? "-3rem" : "");
+    }
+  }, []);
 
   return (
     <>
@@ -91,7 +98,7 @@ export const Header = () => {
           fillWidth
           horizontal="center"
           style={{
-            marginLeft: window.innerWidth < 768 ? "-3rem" : "",
+            marginLeft,
           }}
         >
           <Flex
