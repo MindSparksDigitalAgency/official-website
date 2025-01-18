@@ -42,7 +42,7 @@ const effects = {
     tilt: 0,
     colorStart: "brand-background-strong",
     colorEnd: "static-transparent",
-    opacity: 50,
+    opacity: 70,
   },
   dots: {
     display: true,
