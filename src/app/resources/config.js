@@ -1,4 +1,4 @@
-const baseURL = "demo.magic-portfolio.com";
+const baseURL = "mindsparks-official.netlify.app";
 
 const routes = {
   "/": true,
@@ -42,7 +42,7 @@ const effects = {
     tilt: 0,
     colorStart: "brand-background-strong",
     colorEnd: "static-transparent",
-    opacity: 70,
+    opacity: 80,
   },
   dots: {
     display: true,

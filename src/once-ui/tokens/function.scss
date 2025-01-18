@@ -82,13 +82,13 @@
 }
 
 [data-theme="light"] {
-    --gradient-color-start: var(--scheme-orange-400);
-    --gradient-color-end: var(--scheme-red-200);
+    --brand-background-weak: var(--scheme-orange-400);
+    --brand-on-background-weak: var(--scheme-red-200);
 }
 
 [data-theme="dark"] {
-    --gradient-color-start: var(--scheme-orange-400);
-    --gradient-color-end: var(--scheme-red-200);
+    --brand-background-weak: var(--scheme-orange-400);
+    --brand-on-background-weak: var(--scheme-red-200);
 }
 
 /* brand */
