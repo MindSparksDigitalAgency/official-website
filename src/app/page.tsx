@@ -11,6 +11,7 @@ import {
   Column,
   GlitchFx,
   SmartImage,
+  LetterFx,
 } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
@@ -102,27 +103,51 @@ export default function Home() {
           </RevealFx>
         </Column>
         <Column maxWidth="s">
-          <GlitchFx fillWidth speed="medium">
-            <Column center fillWidth gap="2">
-              <SmartImage
-                src="/images/earth.webp"
-                alt="Earth"
-                aspectRatio="1 / 1"
-                maxWidth={24}
-                sizes="640px"
-              />
-              <Heading as="h2" align="center" variant="display-default-xs">
-                Welcome to {person.firstName} {person.lastName}
-              </Heading>
-              <Text
-                align="center"
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {person.description}
-              </Text>
-            </Column>
-          </GlitchFx>
+          <RevealFx speed="medium" delay={0} translateY={0} trigger>
+            <GlitchFx fillWidth speed="medium">
+              <Column center fillWidth gap="2">
+                <SmartImage
+                  src="/images/earth.webp"
+                  alt="Earth"
+                  aspectRatio="1 / 1"
+                  maxWidth={24}
+                  sizes="640px"
+                />
+                <Heading as="h2" align="center" variant="display-default-xs">
+                  Welcome to {person.firstName} {person.lastName}
+                </Heading>
+                <Text
+                  align="center"
+                  variant="body-default-s"
+                  onBackground="neutral-weak"
+                >
+                  <LetterFx
+                    speed="medium"
+                    trigger="instant"
+                    charset={[
+                      "X",
+                      "@",
+                      "$",
+                      "a",
+                      "H",
+                      "z",
+                      "o",
+                      "0",
+                      "y",
+                      "#",
+                      "?",
+                      "*",
+                      "0",
+                      "1",
+                      "+",
+                    ]}
+                  >
+                    {person.description}
+                  </LetterFx>
+                </Text>
+              </Column>
+            </GlitchFx>
+          </RevealFx>
         </Column>
       </Flex>
 
