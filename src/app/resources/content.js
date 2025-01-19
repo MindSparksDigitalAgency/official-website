@@ -10,11 +10,12 @@ const person = {
   avatar: "/images/logo.jpg",
   location: "Asia/Jakarta",
   languages: ["English", "Bahasa"],
+  description: "Great ideas begin with a spark, and at Mindsparks, we make sure it burns bright. Let’s transform that spark into a powerful brand journey that leaves a lasting impact."
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName} {person.lastName} Newsletter</>,
   description: (
     <>
       I occasionally write about design, technology, and share thoughts on the intersection of
@@ -71,7 +72,7 @@ const home = {
         onClick={''}
         variant={themeColor === "dark" ? "danger" : "secondary"}
         size="m"
-        label="Let’s Begin!"
+        label="Come Say Hi!"
       />
     </>
   ),

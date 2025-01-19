@@ -103,7 +103,7 @@ export default function Home() {
         </Column>
         <Column maxWidth="s">
           <GlitchFx fillWidth speed="medium">
-            <Column center fillWidth gap="8">
+            <Column center fillWidth gap="2">
               <SmartImage
                 src="/images/earth.webp"
                 alt="Earth"
@@ -119,7 +119,7 @@ export default function Home() {
                 variant="body-default-s"
                 onBackground="neutral-weak"
               >
-                Home to over 8 billion apes
+                {person.description}
               </Text>
             </Column>
           </GlitchFx>
