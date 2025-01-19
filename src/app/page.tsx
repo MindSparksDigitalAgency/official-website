@@ -74,7 +74,7 @@ export default function Home() {
         }}
       />
       <Flex fillWidth gap="24" mobileDirection="column">
-        <Column fillWidth maxWidth="s">
+        <Column fillWidth maxWidth="s" className="mt-80">
           <RevealFx
             translateY="4"
             fillWidth
