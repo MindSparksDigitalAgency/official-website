@@ -62,7 +62,7 @@ const home = {
   label: "Home",
   title: `${person.name} official`,
   description: `Portfolio website showcasing my work as a ${person.role} ${themeColor}`,
-  headline: <>It's All About You </>,
+  headline: <>It's All About You ✨</>,
   subline: (
     <>
       Your Brand. Your Goal. Your Dreams.
@@ -72,7 +72,7 @@ const home = {
         onClick={''}
         variant={themeColor === "dark" ? "danger" : "secondary"}
         size="m"
-        label="Come Say Hi!"
+        label="Come Say Hi! 😎"
       />
     </>
   ),
